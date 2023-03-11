@@ -7,16 +7,16 @@ services:
       context: backend
       dockerfile: Dockerfile
     env_file: .env
-    restart: always
+    restart: on-failure
     ports:
-      - '4000:3000'
+      - '4000:4000'
     depends_on:
       - postgres
 
   postgres:
     container_name: 'kupipodariday-database'
     image: postgres:12.12-alpine
-    restart: always
+    restart: on-failure
     env_file: .env
 
   frontend:
@@ -25,4 +25,4 @@ services:
       context: frontend
       dockerfile: Dockerfile
     ports:
-      - '81:80'
+      - '8081:80'
