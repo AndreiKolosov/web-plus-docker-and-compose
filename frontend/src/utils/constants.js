@@ -1,4 +1,4 @@
-export const URL = 'http://api.kolosov.kypipodariday.nomoredomains.work';
+export const URL = 'https://api.kolosov.kypipodariday.nomoredomains.work';
 
 export const MINIMUM_PASSWORD_LENGTH = 3;
 export const MINIMUM_USERNAME_LENGTH = 3;
